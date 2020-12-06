@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,230,233,1) 100%);
+        }
+
+        #player {
+            font-size: 5em;
+            color: #fff;
+            margin: 0;
+        }
+        .dice {
+            font-size: 20em;
+            text-align: center;
+            margin: 5px;
+            color: #fff;
+        }
+
+        button, button:focus{
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: #000;
+            color: #fff;
+            background-color: rgb(52, 161, 230);
+        }
+    </style>
+</head>
+<body>
+    <h3 id="player">Player 1</h3>
+    <div id="dice" class="dice">&#9856;</div>
+    <button onclick="rollDice()">Roll Dice</button>
+    <h3 id="roll"></h3>
+
+<script>
+    const rollDice= () => {
+        di = document.getElementById("dice");
+        roll = document.getElementById("dice");
+        player = document.getElementById("player");
+        var diceRoll = Math.floor(Math.random() * 6) + 1;
+                if (diceRoll == "1") {
+                    roll.innerHTML = "&#9856;";
+                }
+                if (diceRoll == "2") {
+                    roll.innerHTML = "&#9857;";
+                }
+                if (diceRoll == "3") {
+                    roll.innerHTML = "&#9858;";
+                }
+                if (diceRoll == "4") {
+                    roll.innerHTML = "&#9859;";
+                }
+                if (diceRoll == "5") {
+                    roll.innerHTML = "&#9860;";
+                }
+                if (diceRoll == "5") { 
+                    roll.innerHTML = "&#9861;";
+                }
+                if (player.innerHTML === "Player 1") {
+                    player.innerHTML = "Player 2";
+                } else {
+                    player.innerHTML = "Player 1";
+                }
+            }
+</script>
+</body>
+</html>
